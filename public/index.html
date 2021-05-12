@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Socket.io POC</title>
+    <style>
+      #buzzer-and-list-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #buzzer-button {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        box-shadow: 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the clickerdome</h1>
+    <section id="user-container">
+      <form id="add-user-form">
+        <input type="text" id="add-user-input" placeholder="Enter your name" />
+        <button type="submit">Enter</button>
+      </form>
+      <h3 id="user-greeting"></h3>
+    </section>
+    <div id="buzzer-and-list-container">
+      <section class="buzzer-container">
+        <button id="buzzer-button"><h2>Click Me!</h2></button>
+      </section>
+      <section class="buzz-list-container">
+        <h2>The Buzz List</h2>
+        <ol id="buzzer-list">
+        </ol>
+      </section>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+      integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./client.js"></script>
+  </body>
+</html>
